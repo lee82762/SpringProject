@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-
+//서비스
 @Service
 @AllArgsConstructor
 public class BoardService {
