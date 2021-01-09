@@ -1,5 +1,6 @@
 package com.example.springboardproject.Domain.Entity;
 
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,8 +13,8 @@ import javax.persistence.Id;
 @Data
 @Entity(name="board")
 
-@NoArgsConstructor
-public class BoardEntity {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class BoardEntity extends TimeEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
@@ -28,4 +29,6 @@ public class BoardEntity {
         this.title = title;
         this.content = content;
     }
+
+
 }
